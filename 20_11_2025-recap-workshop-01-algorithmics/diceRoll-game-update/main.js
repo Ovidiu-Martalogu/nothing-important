@@ -85,7 +85,8 @@ console.log(` `);
 let scores=[];
 for (let i = 0; i < players.length; i++){
     console.log(`Place ${players.length-i} is: ${players[i].name}, with score:${players[i].score}`);
-      scores.push(players[i].score); 
+      scores.push(players[i].score);
+      
      }
 
 
