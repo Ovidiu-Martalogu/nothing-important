@@ -68,11 +68,13 @@ let testScore=[];
 let winnigPlayer = players[0].name;
 for (let i = 0; i < players.length; i++) {
     
-    if (players[i].score>maxScore) {
+    if (players[i].score > maxScore) {
         maxScore = players[i].score;
         winnigPlayer = players[i].name;
      
 }
+
+
     // if (players[i].score < minScore) {
     //     minScore = players[i].score;
     //     loosingPlayer = players[i].name;
@@ -96,6 +98,9 @@ console.log(`Winning player is : ${winnigPlayer}, with maxim score : ${maxScore}
 console.log(` `);
 console.log(`Loosing player is : ${players[0].name}, with min score : ${players[0].score}`);
 console.log(scores);
+const duplicates = players.filter((player, index, arr) =>
+  arr.findIndex(p => p.score === player.score) !== index
+);
 
-
+console.log(duplicates);
 
